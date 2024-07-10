@@ -1,0 +1,76 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+.headerbg{
+    background-color: rgb(6, 67, 120);
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav{
+    width:100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 15px 0;
+}
+
+nav ul li{
+    display: inline-block;
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    padding: 5px 20px;
+    font-size: 1.3em;
+}
+
+.headerdata{
+    color: white;
+    margin: 0.5rem 0;
+    font-family: 'Unica One',cursive;
+}
+
+#about {
+    background-color: #00aaff21; 
+    text-align: center;
+}
+
+.pfp{
+    max-width: 40%;
+    height: auto;
+}
+
+#portfolio {
+    background-color: rgb(4, 73, 67); 
+    color: #ccc;
+    padding: 15px;
+    border-radius: 0.5%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.port{
+    width: 200px;
+    height: 200px;
+    border: 1px solid #ccc;
+    margin: 10px;
+    display: inline-block;
+    line-height: 200px;
+}
+
+#contact{
+    background-color: #00a3cc; 
+    padding: 15px;
+    border-radius: 0.5%;
+    text-align: center;
+
+}
