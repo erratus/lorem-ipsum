@@ -1,44 +1,52 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <link href="/style.css" rel="stylesheet">
-
-    <title>About</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <title>Form Validation Example</title>
+    <script src="/scripts.js" defer></script>
 </head>
 <body>
-<header class="headerbg">
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#portfolio">portfolio</a></li>
-            <li><a href="#contact">contact</a></li>
-        </ul>
-    </nav>
-    <div class="headerdata">
-        <h1 >Lorem ipsum</h1>
-        <p>option 1 | option 2 | option 3</p>
-    </div>
-</header>
-<main>
-    <section id="about">
-        <h2 >About me</h2>
-        <img src="/assets/pngwing.com.png" alt="pfp" class="pfp">
-        <p>this is a test portfolio page with gibberish Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste consectetur similique perferendis! Dolor architecto delectus iste veniam, quo mollitia fuga rem corrupti. Dolore explicabo doloribus, culpa necessitatibus labore rem quibusdam!</p>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum asperiores incidunt, officiis ullam distinctio ut temporibus, ex quas molestiae, dolores et suscipit eos? Libero, modi! Incidunt maxime quaerat ipsum officia!</p>
-    </section>
-    <section id="portfolio">
-        <h2>This is my Portfolio</h2>
-        <div class="port">project 1</div>
-        <div class="port">project 2</div>
-        <div class="port">project 3</div>
-        <p>given here are all the projects that i have done </p>
-    </section>
-    <section id="contact">
-        <h2>contact me</h2>
-        <p>you can contact me at <a href="mailto:example@gmail.com">example
-    </section>
-</main>
+    <form name="myForm" action="success.html" method="post" onsubmit="return validateForm()">
+        Enter name:<input type="text" id="fname" name="fname">
+        <small id="mtname" style="color: red;"></small>
+        <br>
+        Email: <input type="email" id="mail" name="mail" >
+        <small id="emailError" style="color: red;"></small>
+        <br>
+        password: <input type="password" id="pass" name="pass" required maxlength="20" minlength="8">
+        <br>
+        confirm password <input type="password" id="confirmpassword" name="confirmpassword" >
+        <br>
+        <small id="passwordmatch" style="color: red;"></small>
+        <br>
+        <div>
+            <div>
+                <label for="country" class="form-label">Country Code:</label>
+                <select id="country" name="country" class="form-control" required>
+                    <option value="" disabled selected></option>
+                    <option value="+91">+91 (India)</option>
+                    <option value="+1">+1 (United States)</option>
+                    <option value="+44">+44 (United Kingdom)</option>
+                    <option value="+33">+33 (France)</option>
+                    <option value="+49">+49 (Germany)</option>
+                    <option value="+81">+81 (Japan)</option>
+                    <option value="+86">+86 (China)</option>
+                    <option value="+61">+61 (Australia)</option>
+                    <option value="+34">+34 (Spain)</option>
+                    <option value="+39">+39 (Italy)</option>
+                    <option value="+7">+7 (Russia)</option>
+                </select>
+            </div>
+            <div>
+                <label for="phoneNumber" class="form-label">Phone number</label>
+                <input type="tel" name="phone_number" class="form-control" id="phoneNumber" placeholder="123-456-3421" required pattern="[0-9]{10}">
+            </div>
+        </div>
+        <input type="submit" value="Submit">
+
+
+    </form>
 </body>
 </html>
-
-this is not a change
