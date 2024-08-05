@@ -1,76 +1,105 @@
-body{
-    margin: 0;
-    padding: 0;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+/* styles.css */
+
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+
+/* General body styling */
+body {
+    background: #fff;
+    font-family: 'PT Sans', sans-serif;
+    margin: 20px;
 }
 
-
-.headerbg{
-    background-color: rgb(6, 67, 120);
-    text-align: center;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* Heading style */
+h2 {
+    padding-top: 1.5rem;
 }
 
-nav{
-    width:100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 15px 0;
+/* Link styling */
+a {
+    color: #333;
 }
 
-nav ul li{
-    display: inline-block;
-}
-
-nav ul li a{
-    color: white;
+a:hover {
+    color: #da5767;
     text-decoration: none;
-    padding: 5px 20px;
-    font-size: 1.3em;
 }
 
-.headerdata{
-    color: white;
-    margin: 0.5rem 0;
-    font-family: 'Unica One',cursive;
+/* Card styling */
+form {
+    border: 0.40rem solid #f8f9fa;
+    top: 10%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 0.375rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    position: relative;
 }
 
-#about {
-    background-color: #00aaff21; 
-    text-align: center;
+/* Form control styling */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+select {
+    background-color: #f8f9fa;
+    padding: 0.75rem;
+    margin-bottom: 1.3rem;
+    width: 100%;
+    border: 1px solid #ced4da;
+    border-radius: 0.375rem;
+    font-size: 1rem;
 }
 
-.pfp{
-    max-width: 40%;
-    height: auto;
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="tel"]:focus,
+select:focus {
+    color: #000000;
+    background-color: #ffffff;
+    border: 3px solid #da5767;
+    outline: 0;
+    box-shadow: none;
 }
 
-#portfolio {
-    background-color: rgb(4, 73, 67); 
-    color: #ccc;
-    padding: 15px;
-    border-radius: 0.5%;
-    text-align: center;
-    margin-bottom: 10px;
+/* Labels styling */
+label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
 }
 
-.port{
-    width: 200px;
-    height: 200px;
-    border: 1px solid #ccc;
-    margin: 10px;
-    display: inline-block;
-    line-height: 200px;
+/* Small error messages styling */
+small {
+    font-size: 0.875rem;
+    display: block;
+    margin-top: -0.25rem;
+    margin-bottom: 1.3rem;
+    color: #dc3545;
 }
 
-#contact{
-    background-color: #00a3cc; 
-    padding: 15px;
-    border-radius: 0.5%;
-    text-align: center;
+/* Button styling */
+input[type="submit"] {
+    padding: 0.6rem 1.2rem;
+    background: #da5767;
+    border: 2px solid #da5767;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 400;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
 
+input[type="submit"]:hover {
+    background-color: #df8c96;
+    border-color: #df8c96;
+}
+
+/* Remove default spacing for br elements */
+form br {
+    display: none;
 }
